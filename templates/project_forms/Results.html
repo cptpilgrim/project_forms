@@ -1,0 +1,42 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    This page displays data
+{% endblock %}
+
+{% block content %}
+
+    <p>oTree checkboxes:</p>
+
+    <p> First checkbox? {{ player.checkbox_option_1 }}.</p>
+    <p> Second checkbox? {{ player.checkbox_option_2 }}.</p>
+    <p> Third checkbox?? {{ player.checkbox_option_3 }}.</p>
+
+    <p> HTML checkboxes:</p>
+
+    <p> First checkbox? {{ player.html_checkbox_1 }}.</p>
+    <p> Second checkbox? {{ player.html_checkbox_2 }}.</p>
+    <p> Third checkbox?? {{ player.html_checkbox_3 }}.</p>
+
+
+    <p>Radiobuttons:</p>
+
+        <p> oTree radio: {{ player.radio}}.</p>
+        <p> HTML Radio: {{ player.html_radio}}.</p>
+
+
+    <p>Slider:</p>
+
+        <p> HTML vertical Slider: {{ player.html_slider_vertical}}.</p>
+        <p> HTML horizontal Slider: {{ player.html_slider_horizontal}}.</p>
+
+    <p>Dropdown:</p>
+
+    <p>Your Default dropdown choice was {{ player.choice }}.</p>
+    <p>Your Hover dropdown choice was {{ player.html_choice }}.</p>
+
+    {% next_button %}
+{% endblock %}
+
+
